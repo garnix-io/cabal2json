@@ -98,7 +98,7 @@
         in
           pkgs.runCommand "all-cabal-json-files" {} ''
             cd ${all-cabal-files}
-            ${pkgs.parallel}/bin/no \
+            ${pkgs.parallel}/bin/parallel \
               --halt now,fail,1 \
               -a <(${pkgs.findutils}/bin/find . -type f -name '*.cabal') \
               bash ${script}
