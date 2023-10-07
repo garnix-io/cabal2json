@@ -1,5 +1,5 @@
 builds:
   include:
-    - "packages.*.*"
+    - "packages.*.cabal2json"
     - "devShell.*.*"
     - "checks.x86_64-linux.*"
